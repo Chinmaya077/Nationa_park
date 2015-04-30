@@ -1,0 +1,83 @@
+<html> 
+<head> 
+   
+   <title>Bhitarkanika</title>
+   <style type="text/css">
+<!--
+.style3 {
+	font-size: 24px;
+	font-weight: bold;
+	color: #660033;
+	font-family: calibri;
+}
+body,td,th {
+	color: #330066;
+}
+.style7 {
+	font-family: calibri;
+	color: #660033;
+}
+.style17 {font-family: calibri}
+.style20 {color: #660033}
+.style21 {color: #0066FF}
+.style23 {color: #6633FF}
+-->
+   </style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><body bgcolor="#9BBB59">
+
+<img src="tiger.jpg" style="width:1320px;height:150px">
+
+   <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
+<script type="text/javascript" 
+           src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+<div id="map" style="width: 400px; height: 400px; float: right;"></div> 
+     <div id="panel" style="width: 300px; float: right;"></div> 
+  
+     <h2><strong>&nbsp;&nbsp;&nbsp;<span class="style20">&nbsp; </span></strong><span class="style3"><u>BHITARKANIKA NATIONAL PARK</u></span></h2>
+<ul class="style7">
+  <li>
+    <h3><span class="style17"><strong> Bhitarkanika National Park covers an  area of</strong><br>
+        <strong>145 square kilometre<span class="style21">and  has been designated as a National Park since 1998.</span>.</strong></span></h3>
+  </li>
+  <li>
+  <h3><span class="style17"><strong>The national park and wildlife sanctuary is inundated by a number of rivers - </strong><br>
+  <strong>Brahmani, Baitarni, Dhamra, Pathsala and others.</strong>
+  </li>
+</ul>
+<ul class="style7">
+  <li>
+    <h3><span class="style17"><strong><span class="style21">The park is home to the endangered Saltwater Crocodile (Crocodylus porosus). </span> White Crocodile, Indian python, King Cobra, black ibis,  <span class="style21"> darters and many other species of flora and fauna.</span> 
+      </h3>
+  </li>
+</ul>
+
+
+</form>
+<script type="text/javascript"> 
+
+     var directionsService = new google.maps.DirectionsService();
+     var directionsDisplay = new google.maps.DirectionsRenderer();
+
+     var map = new google.maps.Map(document.getElementById('map'), {
+       zoom:7,
+       mapTypeId: google.maps.MapTypeId.ROADMAP
+     });
+
+     directionsDisplay.setMap(map);
+     directionsDisplay.setPanel(document.getElementById('panel'));
+
+     var request = {
+       origin: 'Bhubaneshwar', 
+       destination: 'Bhitarkanika National Park',
+       travelMode: google.maps.DirectionsTravelMode.DRIVING
+     };
+
+     directionsService.route(request, function(response, status) {
+       if (status == google.maps.DirectionsStatus.OK) {
+         directionsDisplay.setDirections(response);
+       }
+     });
+   </script> 
+</body>
+</html>
